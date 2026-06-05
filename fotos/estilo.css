@@ -1,0 +1,539 @@
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root{
+    --bg:#050505;
+    --card:#101010;
+    --white:#ffffff;
+
+    --purple:#8a2be2;
+    --blue:#00bfff;
+    --pink:#ff006e;
+
+    --glass:rgba(255,255,255,.05);
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:white;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+section{
+    padding:100px 0;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* =========================
+   PARTICLES
+========================= */
+
+#particles-js{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.glass-nav{
+    background:rgba(0,0,0,.4);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+    color:var(--blue)!important;
+    font-size:1.4rem;
+    letter-spacing:3px;
+}
+
+.nav-link{
+    color:white!important;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:var(--blue)!important;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.video-fondo{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:
+    linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.8)
+    );
+}
+
+.hero-content{
+    position:relative;
+    z-index:5;
+    text-align:center;
+    max-width:900px;
+    padding:20px;
+    position:relative;
+    z-index:10;
+}
+
+.titulo-principal{
+    font-size:6rem;
+    font-weight:800;
+    text-transform:uppercase;
+
+    text-shadow:
+    0 0 10px var(--blue),
+    0 0 25px var(--purple),
+    0 0 50px var(--pink);
+}
+
+.subtitulo{
+    font-size:1.4rem;
+    margin-top:20px;
+    line-height:1.8;
+}
+
+/* =========================
+   BOTON
+========================= */
+
+.btn-neon{
+    margin-top:40px;
+    border:none;
+    padding:15px 40px;
+    border-radius:50px;
+
+    color:white;
+    background:
+    linear-gradient(
+    45deg,
+    var(--purple),
+    var(--blue)
+    );
+
+    font-weight:bold;
+    transition:.4s;
+}
+
+.btn-neon:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 15px var(--blue),
+    0 0 30px var(--purple);
+}
+
+/* =========================
+   FRASE BANNER
+========================= */
+
+.frase-banner{
+    background:#090909;
+    text-align:center;
+}
+
+.frase-banner h2{
+    font-size:2rem;
+    color:var(--blue);
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.anime-card{
+    background:var(--glass);
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:40px;
+    border-radius:25px;
+}
+
+.anime-card h2{
+    color:var(--pink);
+    margin-bottom:20px;
+}
+
+.hero-photo{
+    border-radius:30px;
+
+    box-shadow:
+    0 0 30px rgba(0,191,255,.4);
+
+    transition:.4s;
+}
+
+.hero-photo:hover{
+    transform:scale(1.04);
+}
+
+/* =========================
+   GALERIA
+========================= */
+
+.galeria-section{
+    background:#070707;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:3rem;
+}
+
+.gallery-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+}
+
+.gallery-item{
+
+    transition:.5s;
+
+    border-radius:20px;
+
+    cursor:pointer;
+}
+
+.gallery-item:hover{
+
+    transform:
+    scale(1.08)
+    rotate(2deg);
+
+    box-shadow:
+    0 0 25px #00bfff,
+    0 0 50px #8a2be2;
+
+}
+
+.gallery-item:hover{
+
+    transform:
+    scale(1.05)
+    rotate(1deg);
+
+    box-shadow:
+    0 0 20px var(--purple),
+    0 0 40px var(--blue);
+}
+
+/* =========================
+   FRASES
+========================= */
+
+.quotes-section{
+    background:#050505;
+}
+
+.quote-card{
+
+    background:var(--glass);
+
+    border-left:4px solid var(--pink);
+
+    padding:30px;
+
+    margin-bottom:30px;
+
+    border-radius:15px;
+
+    font-size:1.2rem;
+
+    backdrop-filter:blur(10px);
+}
+
+/* =========================
+   CARTA
+========================= */
+
+.btn-carta{
+
+    background:
+    linear-gradient(
+    45deg,
+    var(--pink),
+    var(--purple)
+    );
+
+    border:none;
+
+    color:white;
+
+    padding:18px 40px;
+
+    border-radius:50px;
+
+    font-size:1.1rem;
+
+    cursor:pointer;
+}
+
+.contenido-carta{
+
+    max-width:800px;
+
+    margin:auto;
+
+    margin-top:40px;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    display:none;
+}
+
+.contenido-carta h2{
+    color:var(--blue);
+    margin-bottom:20px;
+}
+
+.contenido-carta p{
+    line-height:2;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-imagen{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.95);
+
+    z-index:9999;
+}
+
+#imagenExpandida{
+
+    display:block;
+
+    margin:auto;
+
+    max-width:90%;
+    max-height:90%;
+
+    margin-top:30px;
+}
+
+.cerrar{
+
+    position:absolute;
+
+    top:20px;
+    right:40px;
+
+    font-size:3rem;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer h3{
+    color:var(--blue);
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#050505;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--purple);
+    border-radius:20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .titulo-principal{
+        font-size:3rem;
+    }
+
+    .subtitulo{
+        font-size:1rem;
+    }
+
+    .frase-banner h2{
+        font-size:1.4rem;
+    }
+
+    .section-title{
+        font-size:2rem;
+    }
+
+    .gallery-item{
+        height:250px;
+    }
+
+}
+
+.moonlight-quote{
+    margin-top:20px;
+    font-size:1.3rem;
+    color:#00bfff;
+    letter-spacing:2px;
+
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+
+    from{
+        text-shadow:
+        0 0 10px #00bfff;
+    }
+
+    to{
+        text-shadow:
+        0 0 20px #00bfff,
+        0 0 40px #8a2be2;
+    }
+
+}
+
+/* =========================
+   LLUVIA ANIME TOKIO
+========================= */
+
+.rain{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:1;
+    overflow:hidden;
+}
+
+.rain::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    background-image:
+    linear-gradient(
+        transparent,
+        rgba(0,191,255,.8)
+    );
+
+    background-size:2px 100px;
+
+    animation: rainFall .35s linear infinite;
+
+    opacity:.4;
+}
+
+@keyframes rainFall{
+
+    from{
+        transform:translateY(-100px);
+    }
+
+    to{
+        transform:translateY(100vh);
+    }
+
+}
+
